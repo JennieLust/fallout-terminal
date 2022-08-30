@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+</head>
+<!--
+    Todo: 
+
+    Vector: 
+        exterior and interor
+        buttons 
+    
+    Images: 
+        screen flicker
+        screen gradient
+    
+    Font
+    Content (
+        Bulletin 
+        Personal login 
+            -> automatic animation login 
+            -> play text adventure game
+                -> ? 
+        Project logs 
+            -> 6 different logs 
+            -> ability to add logs ? 
+    )
+
+
+-->
+<style>
+
+    body {
+        background-color: black;
+        margin: 0;
+    }
+
+    .container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .outer {
+        background-color: rgb(88, 88, 88);
+        width: 1000px;
+        height: 700px;
+        position: absolute;
+        z-index: 1;
+        top: 40px;
+        border-top: 5px solid rgb(163, 163, 163);
+        border-left: 3px solid rgb(139, 139, 139);
+        border-right: 5px solid rgb(80, 80, 80);
+    }
+
+    .screen {
+        background-color: darkslategray;
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        z-index: 2;
+        top: -20px;
+        left: 30px;
+
+        margin: 20px 0;
+        border-radius: 50% / 10%;
+    }
+
+    .outer-in {
+        position: absolute;
+        top: 60px;
+        left: 70px;
+        width: 600px;
+        height: 400px;
+        border-radius: 50% / 10%;
+        border-top: 70px solid rgb(163, 163, 163);
+        border-left: 70px solid rgb(139, 139, 139);
+        border-right: 70px solid rgb(80, 80, 80);
+        border-bottom: 70px solid rgb(80, 80, 80);
+        
+    }
+
+    .screen::before{
+        content: '';
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: -5%;
+        left: -5%;
+        background: inherit;
+        border-radius: 5% / 50%;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="outer">
+            <div class="outer-in">
+                <div class="screen">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
